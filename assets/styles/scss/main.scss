@@ -1,0 +1,179 @@
+@import './helpers/all';
+
+body {
+    @include respond-to (tablet) {
+        padding-bottom: 290px;
+    }
+
+    @include font-16-regular;
+
+    font-family: $font_main, sans-serif;
+}
+
+.header {
+    padding: $indent-md 0;
+
+    @include respond-to(mobile) {
+        padding-inline: $indent-sm;
+
+        &_logo {
+            height: 40px;
+        }
+    }
+
+    &_logo {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.banner {
+    $banner-width: min(100%, 1532px);
+
+    position: relative;
+    width: $banner-width;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    &_inner {
+        position: relative;
+        width: 100%;
+
+        @include respond-to (tablet) {
+            min-height: 100dvh;
+        }
+    }
+
+    &_media {
+        display: flex;
+        width: 100%;
+
+        @include respond-to(tablet) {
+            padding: 0 160px;
+        }
+    }
+
+    &_video {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    &_cta {
+        @include g-button($max-width: 100%, $height: 65px, $padding: 20px);
+        @include font-cta;
+
+        margin-top: $indent-md;
+
+        @include respond-to(tablet) {
+            @include g-button;
+
+            margin-top: $indent-lg;
+        }
+    }
+
+    .product_tiles {
+        display: flex;
+        width: 100%;
+
+        @include respond-to(mobile) {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        @include respond-to(tablet) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            justify-content: flex-end;
+            height: 100%;
+        }
+    }
+
+    .product_tile {
+        max-width: calc(100% - 90px);
+        padding: $indent-md;
+        background-color: $white;
+
+        @include respond-to(mobile) {
+            flex: 0 0 100%;
+        }
+
+        @include respond-to(tablet) {
+            $tileVerticalIndent: 60px;
+
+            position: absolute;
+            max-width: 240px;
+
+            @include respond-to(laptop) {
+                $tileVerticalIndent: 165px;
+            }
+
+            &.m-left {
+                bottom: $tileVerticalIndent;
+                left: 0;
+            }
+
+            &.m-right {
+                top: $tileVerticalIndent;
+                right: 0;
+            }
+
+            &.m-fixed {
+                position: fixed;
+                top: calc(#{$indent-md} + var(--header-height, #{$baseHeaderHeight}));
+                right: calc((100dvw - #{$banner-width}) / 2);
+                z-index: 2;
+            }
+
+            &.m-sticky {
+                position: sticky;
+                top: $indent-md;
+                align-self: flex-start;
+                margin-top: $tileVerticalIndent;
+            }
+        }
+
+        @include respond-to(laptop) {
+            max-width: 320px;
+        }
+
+        @include respond-to(desktop) {
+            max-width: 445px;
+        }
+
+        &-image {
+            img {
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            margin-top: $indent-md;
+            gap: $indent-md;
+
+            &.m-centered {
+                text-align: center
+            }
+        }
+
+        &-title {
+            @include font-24;
+        }
+
+        &-text {
+            @include font-16-regular;
+        }
+
+
+        &-cta {
+            @include font-16-light;
+
+            text-decoration: underline;
+        }
+    }
+}

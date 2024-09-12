@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magasin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets//styles/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <img class="header_logo-image" src="./assets/images/logo.svg" alt="Magasin logo">
+        </div>
+    </header>
+    <main>
+        <div class="homepage">
+            <div class="banner">
+                <div class="banner_inner">
+                    <div class="banner_media">
+                        <video class="banner_video" autoplay muted loop>
+                            <source src="./assets/videos/banner-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+                            <source src="./assets/videos/banner.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="product_tiles">
+                        <div class="product_tile m-left">
+                            <div class="product_tile-image">
+                                <picture>
+                                    <source media="(max-width: 768px)" srcset="./assets/images/beauty-mobile.jpg">
+                                    <img src="./assets/images/beauty.jpg" alt="Product 1">
+                                </picture>
+                            </div>
+                            <div class="product_tile-content">
+                                <h2 class="product_tile-title">Goodie Beauty</h2>
+                                <p class="product_tile-text">Bliv  en del af vores fantastiske skønhedsunivers, hvor du får adgang til  beauty goodies, events, skønhedsartikler, podcastepisoder og meget mere.</p>
+                                <a class="product_tile-cta" href="#">Læs mere</a>
+                            </div>
+                        </div>
+
+                        <div class="product_tile m-right m-sticky">
+                            <div class="product_tile-image">
+                                <picture>
+                                    <source media="(max-width: 768px)" srcset="./assets/images/magasin.jpg">
+                                    <img src="./assets/images/magasin.jpg" alt="Product 1">
+                                </picture>
+                            </div>
+                            <div class="product_tile-content m-centered">
+                                <h2 class="product_tile-title">Gavekort</h2>
+                                <p class="product_tile-text">Skal gaven være ekstra særlig? Med et gavekort kan du give hele Magasin i gave, og så kan du kombinere det med en af vores mange lækre services. Mulighederne er mange og det er kun fantasien der sætter grænser! Du kan købe dit gavekort med ekstra forkælelse i alle vores forretninger.</p>
+                                <a class="product_tile-cta" href="#">Køb Gavekort</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="banner_cta" href="#">Shop her</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>

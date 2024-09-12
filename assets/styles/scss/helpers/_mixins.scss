@@ -1,0 +1,47 @@
+@mixin g-button(
+	$display: flex,
+	$width: 100%,
+	$max_width: 228px,
+	$height: 90px,
+	$padding: 30px 60px,
+	$margin: 0 auto,
+    $text-transform: none,
+	$bg_color: transparent,
+	$bg_color_hover: $color_main,
+	$color: $color_main,
+	$color_hover: $white,
+	$border: $border_main,
+	$border_color: currentColor,
+	$border_color_hover: currentColor
+	) {
+	display: $display;
+	justify-content: center;
+	align-items: center;
+	width: $width;
+	max-width: $max_width;
+	height: $height;
+	padding: $padding;
+	margin: $margin;
+	border: $border;
+	border-radius: 0;
+    background-color: $bg_color;
+	color: $color;
+	text-decoration: none;
+	text-align: center;
+	text-transform: $text-transform;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $bg_color_hover;
+		color: $color_hover;
+		text-decoration: none;
+	}
+
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+}

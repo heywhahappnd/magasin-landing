@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sass cache
+.sass-cache/
+
+# Compiled CSS files (if you are generating CSS from SCSS)
+*.css.map
+*.css
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.bak
+
+# Mac OS file system metadata
+.DS_Store
+
+# Other system files
+Thumbs.db
+
+# Editor specific folders/files (e.g., VSCode)
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project

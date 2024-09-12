@@ -1,0 +1,37 @@
+@mixin font_main($font-size, $line-height, $font-family: inherit, $font-style: normal, $letter-spacing: inherit, $text-transform: inherit, $font-weight: normal) {
+	font-size: $font-size;
+	line-height: $line-height;
+    font-style: $font-style;
+
+    @if $font-family != inherit {
+		font-family: $font-family;
+    }
+
+    @if $letter-spacing != inherit {
+        letter-spacing: $letter-spacing;
+    }
+
+    @if $text-transform != inherit {
+        text-transform: $text-transform;
+    }
+
+	@if $font-weight != normal {
+		font-weight: $font-weight;
+	}
+}
+
+@mixin font-24($text-transform: none) {
+	@include font_main(24px, 30px, $font_main, $font_style, $text-transform: $text-transform, $font-weight: 400);
+}
+
+@mixin font-16-regular($text-transform: none) {
+	@include font_main(16px, 20px, $font_main, $font_style, $text-transform: $text-transform, $font-weight: 400);
+}
+
+@mixin font-16-light($text-transform: none) {
+	@include font_main(16px, 20px, $font_main, $font_style, $text-transform: $text-transform, $font-weight: 300);
+}
+
+@mixin font-cta($text-transform: none) {
+    @include font_main(24px, 30px, $font_main, $text-transform: $text-transform, $font-weight: 400);
+}
