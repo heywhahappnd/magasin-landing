@@ -120,7 +120,7 @@ body {
 
             &.m-fixed {
                 position: fixed;
-                top: calc(#{$indent-md} + var(--header-height, #{$baseHeaderHeight}));
+                top: calc(#{$indent-md} + #{$baseHeaderHeight});
                 right: calc((100dvw - #{$banner-width}) / 2);
                 z-index: 2;
             }
